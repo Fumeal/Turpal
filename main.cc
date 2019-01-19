@@ -168,7 +168,7 @@ int main ()
       U[0][1] += (dt/(dx*dx))*I1 - (dt/dx)*(hp+hm)/2.;
       U[0][2] += (dt/(dx*dx*dx))*I2 - (dt/dx)*(hp-hm)/6.;
       U[0][3] += (dt/(dx*dx*dx*dx))*I3 - (dt/dx)*(hm-hp);
-      U[0][4] = (dt/dx)*(hp)/2.;
+      U[0][4] = utt;
       
       
       for (int i=1;i<N-2;i++)
@@ -200,7 +200,7 @@ int main ()
 	  U[i][1] += (dt/(dx*dx))*I1 - (dt/dx)*(hp+hm)/2.;
 	  U[i][2] += (dt/(dx*dx*dx))*I2 - (dt/dx)*(hp-hm)/6.;
 	  U[i][3] += (dt/(dx*dx*dx*dx))*I3 - (dt/dx)*(hm-hp);
-	  U[i][4]  = (dt)*(hp)/2.;
+	  U[i][4]  = utt;
 	    
 
 
@@ -234,7 +234,7 @@ int main ()
       U[N-2][1] += (dt/(dx*dx))*I1 - (dt/dx)*(hp+hm)/2.;
       U[N-2][2] += (dt/(dx*dx*dx))*I2 - (dt/dx)*(hp-hm)/6.;
       U[N-2][3] += (dt/(dx*dx*dx*dx))*I3 - (dt/dx)*(hm-hp);
-      U[N-2][4]  = (dt/dx)*(hp)/2.;
+      U[N-2][4]  = utt;
       //----------------------------------------------------------------------
       
       
@@ -256,7 +256,7 @@ int main ()
       U[N-1][1] += (dt/(dx*dx))*I1 - (dt/dx)*(hp+hm)/2.;
       U[N-1][2] += (dt/(dx*dx*dx))*I2 - (dt/dx)*(hp-hm)/6.;
       U[N-1][3] += (dt/(dx*dx*dx*dx))*I3 - (dt/dx)*(hm-hp);
-      U[N-1][4]  = (dt/dx)*(hp)/2.;
+      U[N-1][4]  = utt;
       //---------------------------------------------------------------------
 
       t+=dt;
